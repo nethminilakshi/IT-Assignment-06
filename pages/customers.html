@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment-6</title>
+    <title>Assignment-06</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -17,7 +17,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Css/items.css" />
+    <link rel="stylesheet" href="/Css/customer.css" />
   </head>
   <body class="bg-light">
     <header>
@@ -81,11 +81,11 @@
     </header>
     <main>
       <div class="container">
-        <div class="row label p-2">
+        <div class="row label p-2 m-auto">
           <div class="col-md-12">
             <h1 class="fw-medium text-start my-auto">
-              <i class="fa-solid fa-cubes"></i>
-              Items
+              <i class="fa-solid fa-users"></i>
+              Customers
             </h1>
           </div>
         </div>
@@ -94,28 +94,29 @@
             <div class="row m-auto w-75 d-flex justify-content-center">
               <div class="col-md-6">
                 <h2
-                  class="fw-normal fs-5 ps-3 p-2 m-0 w-100 bg-success text-light"
+                  class="fw-normal fs-5 ps-3 p-2 m-0 w-100 text-bg-success text-light"
                 >
-                  Item Search
+                  Customer Search
                 </h2>
-                <div class="search bg-custom p-3">
+                <div class="search p-3 bg-custom">
                   <form class="px-2" action="search">
                     <div class="mb-3">
                       <input
                         type="text"
-                        class="form-control border-1 border-dark-subtle rounded-1 my-3"
-                        placeholder="Input Name/Code Here"
+                        class="form-control border-1 border-dark-subtle rounded-1 my-3 w-100"
+                        placeholder="Input Name/NIC/Tp Here"
                         required
                       />
                       <div class="d-flex">
-                        <button class="btn btn-success px-3 rounded-1">
+                        <button class="btn btn-success rounded-1 w-auto px-4">
                           Search
                         </button>
                         <select
                           class="form-select ms-2 w-auto border-1 border-dark-subtle rounded-1"
                         >
                           <option>Name</option>
-                          <option>Code</option>
+                          <option>ID</option>
+                          <option>Phone</option>
                         </select>
                       </div>
                     </div>
@@ -125,16 +126,16 @@
               <div
                 class="col-md-6 pt-3 pt-md-0 d-flex justify-content-md-end justify-content-center"
               >
-                <div class="w-75">
+                <div class="w-100">
                   <button
-                    class="btn bg-warning px-4 rounded-1 w-100 mb-1"
+                    class="btn btn-warning px-4 rounded-1 w-100 mb-1"
                     data-bs-toggle="modal"
-                    data-bs-target="#newItemModal"
+                    data-bs-target="#newCustomerModal"
                   >
-                    New Item
+                    New Customer
                   </button>
-                  <button class="btn bg-info px-4 rounded-1 w-100">
-                    View All Items
+                  <button class="btn btn-info px-4 rounded-1 w-100">
+                    View All Customers
                   </button>
                 </div>
               </div>
@@ -148,7 +149,7 @@
                   <button
                     class="btn btn-info text-white px-4 rounded-1"
                     data-bs-toggle="modal"
-                    data-bs-target="#updateItemModal"
+                    data-bs-target="#updateCustomerModal"
                   >
                     Update
                   </button>
@@ -160,76 +161,78 @@
             </div>
             <div class="row table-content m-auto">
               <div class="col-12">
-                <div class="table-responsive overflow-y-auto">
-                  <table class="table table-hover">
+                <div class="table-responsive text-center">
+                  <table class="table table-hover table-striped-columns">
                     <thead class="table-dark">
                       <tr>
-                        <th scope="col">Item Id</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Salary</th>
                       </tr>
                     </thead>
-                    <tbody class="border-2 border-info-subtle">
+                    <tbody
+                      class="table-group-divider border-2 border-info-subtle"
+                    >
                       <tr>
-                        <td>I001</td>
-                        <td>Apple</td>
-                        <td>50</td>
-                        <td>Rs200.00</td>
+                        <td>C001</td>
+                        <td>Nethmi</td>
+                        <td>Matara</td>
+                        <td>Rs.100,000</td>
                       </tr>
                       <tr>
-                        <td>I002</td>
-                        <td>biscuit</td>
-                        <td>80</td>
-                        <td>Rs150.00</td>
+                        <td>C002</td>
+                        <td>Dasun</td>
+                        <td>Dickwella</td>
+                        <td>Rs.150,000</td>
                       </tr>
                       <tr>
-                        <td>I003</td>
-                        <td>Noodles</td>
-                        <td>80</td>
-                        <td>Rs900.00</td>
+                        <td>C003</td>
+                        <td>Sunimal</td>
+                        <td>Galle</td>
+                        <td>Rs.30,000</td>
                       </tr>
                       <tr>
-                        <td>I004</td>
-                        <td>Bread</td>
-                        <td>70</td>
-                        <td>Rs150.00</td>
+                        <td>C004</td>
+                        <td>Kasuni</td>
+                        <td>Galle</td>
+                        <td>Rs.200,000</td>
                       </tr>
                       <tr>
-                        <td>I005</td>
-                        <td>Milk</td>
-                        <td>20</td>
-                        <td>Rs460.00</td>
+                        <td>C005</td>
+                        <td>Siripala</td>
+                        <td>Matara</td>
+                        <td>Rs.100,000</td>
                       </tr>
                       <tr>
-                        <td>I006</td>
-                        <td>youghurt</td>
-                        <td>10</td>
-                        <td>Rs120.00</td>
+                        <td>C006</td>
+                        <td>Dinal</td>
+                        <td>Tricomallee</td>
+                        <td>Rs90,000</td>
                       </tr>
                       <tr>
-                        <td>I007</td>
-                        <td>Eggs</td>
-                        <td>200</td>
-                        <td>Rs30.00</td>
+                        <td>C007</td>
+                        <td>Linda</td>
+                        <td>Galle</td>
+                        <td>Rs120,000</td>
                       </tr>
                       <tr>
-                        <td>I008</td>
-                        <td>Cheese</td>
-                        <td>12</td>
-                        <td>Rs570.00</td>
+                        <td>C008</td>
+                        <td>Kalindu</td>
+                        <td>Colombo</td>
+                        <td>Rs90,000</td>
                       </tr>
                       <tr>
-                        <td>I009</td>
-                        <td>Chocolate</td>
-                        <td>40</td>
-                        <td>Rs100.00</td>
+                        <td>C009</td>
+                        <td>Jesus</td>
+                        <td>Kaluthara</td>
+                        <td>Rs80,000</td>
                       </tr>
                       <tr>
-                        <td>I010</td>
-                        <td>Toffee</td>
-                        <td>50</td>
-                        <td>Rs10.00</td>
+                        <td>C010</td>
+                        <td>Daniel</td>
+                        <td>Panadura</td>
+                        <td>Rs95,000</td>
                       </tr>
                     </tbody>
                   </table>
@@ -240,13 +243,12 @@
         </div>
       </div>
 
-      <!-- ====New Item ==== -->
-
-      <div class="modal fade" id="newItemModal" tabindex="-1">
+      <!-- New Customer Model -->
+      <div class="modal fade" id="newCustomerModal" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content rounded-0">
             <div class="modal-header bg-success text-white rounded-0">
-              <h5 class="modal-title">New Item</h5>
+              <h5 class="modal-title">New Customer</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -256,7 +258,7 @@
             <div class="modal-body">
               <form>
                 <div class="mb-1">
-                  <label class="form-label fw-bold">Item Code:</label>
+                  <label class="form-label fw-bold">Customer ID:</label>
                   <input
                     type="text"
                     class="form-control border-1 border-dark-subtle rounded-1 my-0"
@@ -264,7 +266,7 @@
                   />
                 </div>
                 <div class="mb-1">
-                  <label class="form-label fw-bold">Item Name:</label>
+                  <label class="form-label fw-bold">Customer Name:</label>
                   <input
                     type="text"
                     class="form-control border-1 border-dark-subtle rounded-1 my-0"
@@ -272,15 +274,15 @@
                   />
                 </div>
                 <div class="mb-1">
-                  <label class="form-label fw-bold">Item Quantity:</label>
-                  <input
-                    type="number"
+                  <label class="form-label fw-bold">Customer Address:</label>
+                  <textarea
                     class="form-control border-1 border-dark-subtle rounded-1 my-0"
+                    rows="3"
                     required
-                  />
+                  ></textarea>
                 </div>
                 <div class="mb-1">
-                  <label class="form-label fw-bold">Item Unit Price:</label>
+                  <label class="form-label fw-bold">Customer Salary:</label>
                   <input
                     type="text"
                     class="form-control border-1 border-dark-subtle rounded-1 my-0"
