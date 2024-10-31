@@ -44,7 +44,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+            id="navbarNavDarkDropdown"
+          >
             <ul class="navbar-nav ml-auto w-100 ms-md-3">
               <li class="nav-item">
                 <a class="nav-link active fw-semibold" href="#">
@@ -62,6 +66,24 @@
                   ><i class="bi bi-box"></i> Items</a
                 >
               </li>
+
+              <li class="nav-item dropdown">
+                <button
+                  class="btn btn-close-white dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  others
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+
               <li class="nav-item ms-md-auto">
                 <div class="d-flex w-100 justify-content-center">
                   <button class="btn fw-medium text-dark">
